@@ -217,19 +217,29 @@ fun listAllMonkeysAndCages(cageList: List<String>) {
  * Returns the number of monkeys found in the given cage list
  */
 fun monkeyCount(cageList: List<String>): Int {
-    check(monkeysList.count() == 0)
-    check(monkeyCounter(monkeys) == "There are no monkeys!")
-
-    return 0    // REPLACE THIS WITH YOUR CODE!
+    var count = 0
+    for (cage in cageList) {
+        if (cage != EMPTY) {
+            count++
+        }
+    }
+    return count
 }
+
 
 
 /**
  * Returns the number of cages that are empty in the given cage list
  */
 fun emptyCount(cageList: List<String>): Int {
-
-    return 0    // REPLACE THIS WITH YOUR CODE!
+    var emptyCount = 0
+    for (cage in cageList) {
+        if (cage == EMPTY) {
+            emptyCount++
+        }
+    }
+    return emptyCount
+// REPLACE THIS WITH YOUR CODE!
 }
 
 
@@ -246,7 +256,7 @@ fun emptyCount(cageList: List<String>): Int {
  */
 fun showMonkeyCages(cageList: List<String>) {
 
-    check(false)    // REPLACE THIS WITH YOUR CODE!
+       // REPLACE THIS WITH YOUR CODE!
 }
 
 
