@@ -200,15 +200,25 @@ fun listEmptyCages(cageList: List<String>) {
  */
 fun listAllMonkeysAndCages(cageList: List<String>) {
     println("MONKEYS & CAGES")
+    for ((index, monkey) in cageList.withIndex()) {
+        if (monkey != EMPTY) {
+            println("- ${monkey.padEnd(10)} (Cage ${index + 1})")
+        }
+    }
+}
+
+
 
         // REPLACE THIS WITH YOUR CODE!
-}
+
 
 
 /**
  * Returns the number of monkeys found in the given cage list
  */
 fun monkeyCount(cageList: List<String>): Int {
+    check(monkeysList.count() == 0)
+    check(monkeyCounter(monkeys) == "There are no monkeys!")
 
     return 0    // REPLACE THIS WITH YOUR CODE!
 }
