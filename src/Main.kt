@@ -200,9 +200,9 @@ fun listEmptyCages(cageList: List<String>) {
  */
 fun listAllMonkeysAndCages(cageList: List<String>) {
     println("MONKEYS & CAGES")
-    for ((index, monkey) in cageList.withIndex()) {
+    for ((i, monkey) in cageList.withIndex()) {
         if (monkey != EMPTY) {
-            println("- ${monkey.padEnd(10)} (Cage ${index + 1})")
+            println("- ${monkey.padEnd(10)} (Cage ${i + 1})")
         }
     }
 }
@@ -255,7 +255,14 @@ fun emptyCount(cageList: List<String>): Int {
  * Tip: the String.padEnd(N) function will help you here
  */
 fun showMonkeyCages(cageList: List<String>) {
-
+    val cageWidth = 10
+    println("+" + "-".repeat(cageWidth)+ "+")
+    print("|")
+    for (i in cageList)
+        print(" Cage {$i}".padEnd(cageWidth ) + "|")
+   for (monkey in cageList) {
+       print("$monkey.padEnd(cageWidth)")
+   }
        // REPLACE THIS WITH YOUR CODE!
 }
 
